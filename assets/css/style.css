@@ -1,39 +1,121 @@
 
-/* variaveis */
+/* =========================
+   VARIÁVEIS GLOBAIS
+========================= */
+
 :root { 
-    --cor-fundo-escuro:#020d18;
-    --cor-fundo-medio:#04192e;
-    --cor-fundo-card:#061e33;
-    --cor-fundo-nav:#051626;
-    --cor-fundo-cabecalho:#030f1e;
-    --cor-fundo-rodape:#010a12;
-/* deixar as cores pre definidas para facilitar a manutenção e a consistência visual do site */
-    --cor-primaria:#00bfff;
-    --cor-primaria-hover:#3aaeff;
-    --cor-acento:#00d4ff;
-    --cor-texto:#cce4ff;
-    --cor-texto-fraco:#5f8caa;
+    --cor-fundo-escuro: #020d18;
+    --cor-fundo-medio: #04192e;
+    --cor-fundo-card: #061e33;
+    --cor-fundo-nav: #051626;
+    --cor-fundo-cabecalho: #030f1e;
+    --cor-fundo-rodape: #010a12;
+
+    /* cores principais */
+    --cor-primaria: #00bfff;
+    --cor-primaria-hover: #3aaeff;
+    --cor-acento: #00d4ff;
+
+    /* textos */
+    --cor-texto: #cce4ff;
+    --cor-texto-fraco: #5f8caa;
     --cor-branco: #ffffff;
-    --cor-erro:#ff6b6b;
-    --cor-sucesso:#4caf80;
-    
+
+    /* feedback */
+    --cor-erro: #ff6b6b;
+    --cor-sucesso: #4caf80;
+
+    /* fontes */
     --fonte-principal: 'Exo 2', sans-serif;
-    --fonte-mono: 'jetbrains mono', monospace;
+    --fonte-mono: 'JetBrains Mono', monospace;
+
+    /* layout */
     --raio-borda: 12px;
-    --sombra-card: 0 4px 8px rgba(0, 120, 255, 0.8);
+
+    /* sombras */
+    --sombra-card: 0 4px 8px rgba(0, 120, 255, 0.25);
     --sombra-brilho: 0 0 10px rgba(13, 143, 255, 0.25);
-    
-    /* reseta Base */
-
-    *,
-    *::before,
-    *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-
-    
-    }
-
-
 }
+
+/* =========================
+   RESET BASE
+========================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.container-cabecalho {
+    background-color: var(--cor-fundo-cabecalho);
+    padding: 36px 60px;
+    border-bottom: 1px solid rgba(13, 143, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* efeito brilho */
+
+.container-cabecalho::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 300px;
+    height: 300px;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(13, 143, 255, 0.3),
+        transparent 70%
+    );
+
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo { 
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--cor-primaria-hover);
+    text-shadow: var(--sombra-brilho);
+}
+
+.cabecalho-inner{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
