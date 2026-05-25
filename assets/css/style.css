@@ -1,0 +1,39 @@
+
+/* variaveis */
+:root { 
+    --cor-fundo-escuro:#020d18;
+    --cor-fundo-medio:#04192e;
+    --cor-fundo-card:#061e33;
+    --cor-fundo-nav:#051626;
+    --cor-fundo-cabecalho:#030f1e;
+    --cor-fundo-rodape:#010a12;
+/* deixar as cores pre definidas para facilitar a manutenção e a consistência visual do site */
+    --cor-primaria:#00bfff;
+    --cor-primaria-hover:#3aaeff;
+    --cor-acento:#00d4ff;
+    --cor-texto:#cce4ff;
+    --cor-texto-fraco:#5f8caa;
+    --cor-branco: #ffffff;
+    --cor-erro:#ff6b6b;
+    --cor-sucesso:#4caf80;
+    
+    --fonte-principal: 'Exo 2', sans-serif;
+    --fonte-mono: 'jetbrains mono', monospace;
+    --raio-borda: 12px;
+    --sombra-card: 0 4px 8px rgba(0, 120, 255, 0.8);
+    --sombra-brilho: 0 0 10px rgba(13, 143, 255, 0.25);
+    
+    /* reseta Base */
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    
+    }
+
+
+}
